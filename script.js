@@ -1,8 +1,5 @@
 // Assignment code here
 
-var specialCharacters = "!# $ % & '()*+,-./:;<=>?@[\]^_`{|}~";
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -15,6 +12,13 @@ function writePassword() {
   passwordText.value = password;
 
 }
+
+// Characters required for password criteria listed here
+
+var specialCharacters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~"; // It doesn't like when I include a backslash so that character has been left out
+var lowercaseLetters = "abcdefghijklmnopqrstuvwxyz"
+var uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+var numberCharacters = "0123456789"
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
