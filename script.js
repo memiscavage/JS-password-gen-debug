@@ -25,8 +25,9 @@ function generatePassword() {
   var characterPool = "";
   var passwordLength = prompt ("Enter your desired password length (8-128 characters, please):");
   passwordLength = parseInt(passwordLength); // This is so the password length chosen is taken into account for password generation
-  //console.log(passwordLength)
-  while (passwordLength > 128 || passwordLength < 8) {
+  //console.log(typeof passwordLength); This was to confirm it's returned as int
+  //console.log(passwordLength); This was to confirm the number typed by user matches what JS sees
+  while (passwordLength > 128 || passwordLength < 8 || passwordLength === '' || passwordLength === NaN || passwordLength === null) {
     passwordLength = prompt ("Please re-enter a number between 8 and 128");
   } // Created a while loop so the user can be re-directed to prompt if number entered does not match criteria 
 
@@ -49,6 +50,11 @@ function generatePassword() {
   if (numberCharactersConfirm === true){
     characterPool += numberCharacters;
   }
+
+  if (specialCharactersConfirm === false && lowercaseLettersConfirm === false && uppercaseLettersConfirm === false && numberCharactersConfirm === false) {
+    alert('You must select at least one character type to generate a password.')
+  }
+  console.log(characterPool)
 }
 
 // Add event listener to generate button
