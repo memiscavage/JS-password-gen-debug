@@ -17,12 +17,18 @@ function generatePassword() {
   var passwordLength = prompt ("Enter your desired password length (8-128 characters, please):");
   while (passwordLength > 128 || passwordLength < 8) {
     passwordLength = prompt ("Please re-enter a number between 8 and 128");
-  }
-  var specialCharactersConfirm = confirm ("Would you like special characters in your password?");
+  } // Created a while loop so the user can be re-directed to prompt if number entered does not match criteria 
+
+  var specialCharactersConfirm = confirm ("Please select 'Ok' if you would like special characters in your password");
   if (specialCharactersConfirm === true){
     characterPool += specialCharacters;
   }
-  console.log("Character pool", characterPool);
+  
+  var lowercaseLettersConfirm = confirm ("Please select 'Ok' if you would like lower-case letters in your password");
+  if (lowercaseLettersConfirm === true){
+    characterPool += lowercaseLetters;
+  }
+  ;
 }
 
 // Write password to the #password input
