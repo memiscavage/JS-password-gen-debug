@@ -24,6 +24,8 @@ function writePassword() {
 function generatePassword() {
   var characterPool = "";
   var passwordLength = prompt ("Enter your desired password length (8-128 characters, please):");
+  passwordLength = parseInt(passwordLength); // This is so the password length chosen is taken into account for password generation
+  //console.log(passwordLength)
   while (passwordLength > 128 || passwordLength < 8) {
     passwordLength = prompt ("Please re-enter a number between 8 and 128");
   } // Created a while loop so the user can be re-directed to prompt if number entered does not match criteria 
