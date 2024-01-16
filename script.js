@@ -10,6 +10,15 @@ var numberCharacters = "0123456789";
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
 // Generate password function info
 
 function generatePassword() {
@@ -38,17 +47,6 @@ function generatePassword() {
   if (numberCharactersConfirm === true){
     characterPool += numberCharacters;
   }
-  console.log("character pool", characterPool);
-}
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-  
-
 }
 
 // Add event listener to generate button
