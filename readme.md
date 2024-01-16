@@ -26,3 +26,6 @@ THEN a password is generated that matches the selected criteria \
 \
 WHEN the password is generated \
 THEN the password is either displayed in an alert or written to the page \
+
+### References
+https://www.w3schools.com/js/js_loop_while.asp - Information for 'while loops'
