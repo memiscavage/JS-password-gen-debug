@@ -52,9 +52,9 @@ function generatePassword() {
   }
 
   if (specialCharactersConfirm === false && lowercaseLettersConfirm === false && uppercaseLettersConfirm === false && numberCharactersConfirm === false) {
-    alert('You must select at least one character type to generate a password.')
+    alert('You must select at least one character type to generate a password.');
   }
-  console.log(characterPool)
+  //console.log(characterPool); this was to confirm the characters selected populate properly
 }
 
 // Add event listener to generate button
