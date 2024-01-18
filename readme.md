@@ -27,6 +27,11 @@ THEN a password is generated that matches the selected criteria \
 WHEN the password is generated \
 THEN the password is either displayed in an alert or written to the page \
 
+### Links and screenshots
+
+
 ### References
 https://www.w3schools.com/js/js_loop_while.asp - Information for 'while loops' \
-https://www.w3schools.com/js/js_operators.asp - Information for operators
+https://www.w3schools.com/js/js_operators.asp - Information for operators \
+https://dev.to/gaelgthomas/array-to-string-without-commas-in-javascript-4mg6#:~:text=In%20JavaScript%2C%20all%20arrays%20have,all%20the%20array%20elements%20concatenated. - Information to remove commas from string \
+Received assistance from TA Walter Perry on lines 65 - 92 of script.js \
