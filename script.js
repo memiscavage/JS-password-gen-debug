@@ -22,7 +22,9 @@ function writePassword() {
 // Generate password function info
 
 function generatePassword() {
-  var characterPool = "";
+  //This section is to create the pool of characters for password generation
+  var characterPool = [];
+  var guaranteedCharacters = [];
   var passwordLength = prompt ("Enter your desired password length (8-128 characters, please):");
   passwordLength = parseInt(passwordLength); // This is so the password length chosen is taken into account for password generation
   //console.log(typeof passwordLength); This was to confirm it's returned as int
@@ -55,6 +57,11 @@ function generatePassword() {
     alert('You must select at least one character type to generate a password.');
   }
   //console.log(characterPool); this was to confirm the characters selected populate properly
+
+  //This section is where the actual password generation begins
+  if (specialCharactersConfirm === true){
+    characterPool.push(specialCharacters[Math.floor(Math.random() * specialCharacters.length)])
+  }
 }
 
 // Add event listener to generate button
