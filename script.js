@@ -12,10 +12,10 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var passwordFinal = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = passwordFinal;
 
 }
 
@@ -91,7 +91,13 @@ function generatePassword() {
     passwordFinal.push(characterPool[Math.floor(Math.random() * characterPool.length)]);
   }
  // console.log(passwordFinal); //This was to test if the total password length matches what the user types in
+
+ passwordFinal = passwordFinal.join("");
+
+ return passwordFinal;
 }
+
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
