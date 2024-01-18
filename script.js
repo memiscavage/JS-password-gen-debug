@@ -25,6 +25,8 @@ function generatePassword() {
   //This section is to create the pool of characters for password generation
   var characterPool = [];
   var guaranteedCharacters = [];
+  var isTrueCharTypeCount = 0;
+  var total;
   var passwordLength = prompt ("Enter your desired password length (8-128 characters, please):");
   passwordLength = parseInt(passwordLength); // This is so the password length chosen is taken into account for password generation
   //console.log(typeof passwordLength); This was to confirm it's returned as int
@@ -60,7 +62,9 @@ function generatePassword() {
 
   //This section is where the actual password generation begins
   if (specialCharactersConfirm === true){
-    characterPool.push(specialCharacters[Math.floor(Math.random() * specialCharacters.length)])
+    guaranteedCharacters.push(specialCharacters[Math.floor(Math.random() * specialCharacters.length)]);
+    characterPool = characterPool.concat(specialCharacters);
+    isTrueCharTypeCount = isTrueCharTypeCount + 1
   }
 }
 
