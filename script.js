@@ -64,7 +64,25 @@ function generatePassword() {
   if (specialCharactersConfirm === true){
     guaranteedCharacters.push(specialCharacters[Math.floor(Math.random() * specialCharacters.length)]);
     characterPool = characterPool.concat(specialCharacters);
-    isTrueCharTypeCount = isTrueCharTypeCount + 1
+    isTrueCharTypeCount = isTrueCharTypeCount + 1;
+  }
+
+  if (lowercaseLettersConfirm === true){
+    guaranteedCharacters.push(lowercaseLetters[Math.floor(Math.random() * lowercaseLetters.length)]);
+    characterPool = characterPool.concat(lowercaseLetters);
+    isTrueCharTypeCount = isTrueCharTypeCount + 1;
+  }
+
+  if (uppercaseLettersConfirm === true){
+    guaranteedCharacters.push(uppercaseLetters[Math.floor(Math.random() * uppercaseLetters.length)]);
+    characterPool = characterPool.concat(uppercaseLetters);
+    isTrueCharTypeCount = isTrueCharTypeCount + 1;
+  }
+
+  if (numberCharactersConfirm === true){
+    guaranteedCharacters.push(numberCharacters[Math.floor(Math.random() * numberCharacters.length)]);
+    characterPool = characterPool.concat(numberCharacters);
+    isTrueCharTypeCount = isTrueCharTypeCount + 1;
   }
 }
 
