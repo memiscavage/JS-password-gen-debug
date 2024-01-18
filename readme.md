@@ -29,6 +29,9 @@ THEN the password is either displayed in an alert or written to the page \
 
 ### Links and screenshots
 
+![image] (https://github.com/memiscavage/JS-password-gen-debug/assets/153465556/a3bb2cfb-ba69-4833-bab0-e17ff186f52b)
+
+
 
 ### References
 https://www.w3schools.com/js/js_loop_while.asp - Information for 'while loops' \
